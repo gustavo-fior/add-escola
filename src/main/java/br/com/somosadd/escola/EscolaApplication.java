@@ -65,22 +65,22 @@ public class EscolaApplication {
 		turma.setNome("Biologia");
 
 		Turma turma2 = new Turma();
-		turma.setEscola(escola);
-		turma.setAlunos(new ArrayList<>());
-		turma.setCapacidade(50);
-		turma.setNome("Matemática");
+		turma2.setEscola(escola);
+		turma2.setAlunos(new ArrayList<>());
+		turma2.setCapacidade(50);
+		turma2.setNome("Matemática");
 
 		Turma turma3 = new Turma();
-		turma.setEscola(escola);
-		turma.setAlunos(new ArrayList<>());
-		turma.setCapacidade(80);
-		turma.setNome("Português");
+		turma3.setEscola(escola);
+		turma3.setAlunos(new ArrayList<>());
+		turma3.setCapacidade(80);
+		turma3.setNome("Português");
 
 		Turma turma4 = new Turma();
-		turma.setEscola(escola);
-		turma.setAlunos(new ArrayList<>());
-		turma.setCapacidade(120);
-		turma.setNome("Artes");
+		turma4.setEscola(escola);
+		turma4.setAlunos(new ArrayList<>());
+		turma4.setCapacidade(120);
+		turma4.setNome("Artes");
 
 		List<Turma> turmas = Arrays.asList(turma, turma2, turma3, turma4);
 
