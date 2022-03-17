@@ -1,6 +1,8 @@
 package br.com.somosadd.escola;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import javax.annotation.PostConstruct;
 
@@ -33,9 +35,9 @@ public class EscolaApplication {
 	public void init() {
 
 		Escola escola = createEscola();
-		Turma turma = createTurma(escola);
+		List<Turma> turmas = createTurma(escola);
 
-		escola.getTurmas().add(turma);
+		escola.getTurmas().addAll(turmas);
 
 		escolaRepository.save(escola);
 
@@ -54,7 +56,7 @@ public class EscolaApplication {
 
 	}
 
-	public Turma createTurma(Escola escola) {
+	public List<Turma> createTurma(Escola escola) {
 
 		Turma turma = new Turma();
 		turma.setEscola(escola);
@@ -62,9 +64,29 @@ public class EscolaApplication {
 		turma.setCapacidade(200);
 		turma.setNome("Biologia");
 
-		turmaRepository.save(turma);
+		Turma turma2 = new Turma();
+		turma.setEscola(escola);
+		turma.setAlunos(new ArrayList<>());
+		turma.setCapacidade(50);
+		turma.setNome("Matemática");
 
-		return turma;
+		Turma turma3 = new Turma();
+		turma.setEscola(escola);
+		turma.setAlunos(new ArrayList<>());
+		turma.setCapacidade(80);
+		turma.setNome("Português");
+
+		Turma turma4 = new Turma();
+		turma.setEscola(escola);
+		turma.setAlunos(new ArrayList<>());
+		turma.setCapacidade(120);
+		turma.setNome("Artes");
+
+		List<Turma> turmas = Arrays.asList(turma, turma2, turma3, turma4);
+
+		turmaRepository.saveAll(turmas);
+
+		return turmas;
 
 	}
 
