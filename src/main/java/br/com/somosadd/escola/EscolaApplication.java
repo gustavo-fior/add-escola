@@ -68,13 +68,13 @@ public class EscolaApplication {
 		turma2.setEscola(escola);
 		turma2.setAlunos(new ArrayList<>());
 		turma2.setCapacidade(50);
-		turma2.setNome("Matemática");
+		turma2.setNome("Geografia");
 
 		Turma turma3 = new Turma();
 		turma3.setEscola(escola);
 		turma3.setAlunos(new ArrayList<>());
 		turma3.setCapacidade(80);
-		turma3.setNome("Português");
+		turma3.setNome("Literatura");
 
 		Turma turma4 = new Turma();
 		turma4.setEscola(escola);
