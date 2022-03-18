@@ -1,10 +1,12 @@
 package br.com.somosadd.escola.model;
 
-import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-@Embeddable
+@Entity
 public class Endereco {
 
+	@Id
 	private String logradouro;
 	private String complemento;
 	private String bairro;
